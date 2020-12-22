@@ -1,0 +1,12 @@
+{
+  "main.css": "/dist/css/main.css?9ef6",
+  "main.js": "/dist/js/main.bundle.js",
+  "assets/README.md?5bbfc23db2ca3ba6932e4fb89aff574e": "/dist/assets/README.md?5bbfc23db2ca3ba6932e4fb89aff574e",
+  "css/main.css.map?9ef6": "/dist/css/main.css.map?9ef6",
+  "fonts/main.scss": "/dist/fonts/roboto-regular.woff?0885",
+  "img/BotellasPKR.png": "/dist/img/BotellasPKR.png?c24b",
+  "img/botellapkr.png": "/dist/img/botellapkr.png?c9a1",
+  "img/imagen-pauta.jpg": "/dist/img/imagen-pauta.jpg?b6b9",
+  "img/qr.jpg": "/dist/img/qr.jpg?5a33",
+  "js/main.bundle.js.LICENSE.txt": "/dist/js/main.bundle.js.LICENSE.txt"
+}

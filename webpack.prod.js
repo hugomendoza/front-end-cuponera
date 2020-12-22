@@ -2,7 +2,7 @@
 const path = require("path");
 const merge = require("webpack-merge");
 const webpack = require("webpack");
-// const git = require("git-rev-sync");
+const git = require("git-rev-sync");
 const moment = require("moment");
 
 // Webpack plugins

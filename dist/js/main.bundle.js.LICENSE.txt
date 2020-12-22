@@ -1,0 +1,9 @@
+/*!
+ * @project        frontendboilerplate
+ * @name           js\main.bundle.js
+ * @author         Serempre
+ * @build          Tue, Dec 22, 2020 4:47 PM ET
+ * @release        5c83199002302d067c7c85245b6cce98ae16ddc5 [main]
+ * @copyright      Copyright (c) 2020 Serempre
+ *
+ */
