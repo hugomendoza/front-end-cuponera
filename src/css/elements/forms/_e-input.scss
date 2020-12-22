@@ -1,0 +1,15 @@
+//
+// Element Input
+//
+
+%input {
+  @extend %control;
+}
+
+input {
+  @extend %input;
+}
+
+input[type="checkbox"] {
+  border-width: 1.5px;
+}

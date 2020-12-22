@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1"
+    />
+    <title>Frontend template</title>
+    <link rel="stylesheet" href="./../dist/css/main.css" />
+  </head>
+  <body>
+    <!--Flujo desde Pauta-->
+    <!--Detalle Cupón-->
+    <div class="hidden">
+      <a href="" class="h-screen-90 block relative w-full">
+        <img
+          src="./../dist/img/imagen-pauta.jpg"
+          alt="Nombre de la Pauta"
+          class="absolute object-cover w-full md:w-auto h-full left-1/2 transform -translate-x-1/2"
+        >
+      </a>
+    </div>
+
+    <!--Agegate-->
+    <section class="hidden">
+      <div class="bg-black h-screen-90 flex justify-center items-center">
+        <div class="container text-center">
+          <h1 class="text-white font-bold text-lg leading-tight">
+            Debes ser mayor de edad para disfrutar <span class="font-light">de esta experiencia</span>
+          </h1>
+        </div>
+      </div>
+    </section>
+
+    <!--Info-->
+    <section class="hidden">
+      <header class="bg-gray-700 text-center py-3 relative z-10">
+        <p class="d-table border-white border rounded-sm mx-auto p-1 text-xs text-white font-black uppercase">
+          Marca
+        </p>
+      </header>
+      <div class="h-screen-90 relative flex items-end justify-center">
+        <img
+          src="./../dist/img/imagen-pauta.jpg"
+          alt="Nombre de la Pauta"
+          class="absolute object-cover w-full md:w-auto h-full left-1/2 transform -translate-x-1/2 top-0"
+        >
+        <button
+          class="btn btn-black relative mb-4"
+          data-toggle="modal"
+          data-target="#modalNoStore"
+        >
+          BUSCA EL PUNTO DE VENTA
+        </button>
+      </div>
+    </section>
+
+    <!--Modal no hay tiendas-->
+    <section
+      class="modal fade"
+      tabindex="-1"
+      id="modalNoStore"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-none">
+          <div class="modal-body text-center">
+            <p class="text-black font-medium text-lg leading-5">
+              Upps, no hay puntos<br>de venta cerca
+            </p>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72.667 72.667" class="fill-current text-gray-700 w-20 mx-auto my-6">
+              <path id="Icon_ionic-md-close-circle" data-name="Icon ionic-md-close-circle" d="M39.708,3.375A36.333,36.333,0,1,0,76.042,39.708,36.208,36.208,0,0,0,39.708,3.375ZM57.875,52.789l-5.087,5.086-13.08-13.08-13.08,13.08-5.087-5.086,13.081-13.08L21.541,26.628l5.087-5.086,13.08,13.08,13.08-13.08,5.087,5.086-13.08,13.08Z" transform="translate(-3.375 -3.375)"/>
+            </svg>
+            <a href="/"
+              class="btn btn-black block mx-auto"
+            >
+              BUSCAR EN EL MAPA
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mapa -->
+
+    <section class="hidden">
+      <header class="bg-gray-700 text-center py-3 relative z-10">
+        <p class="d-table border-white border rounded-sm mx-auto p-1 text-xs text-white font-black uppercase">
+          Marca
+        </p>
+      </header>
+      <div class="h-screen-85 relative">
+        <iframe
+          class="w-full h-full"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.5101339521243!2d-74.04972074888752!3d4.681028643112643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9a5f50cebff3%3A0x3c279a1b1648c7a6!2sSerempre!5e0!3m2!1ses!2sco!4v1608225251892!5m2!1ses!2sco"
+          frameborder="0"
+          style="border:0;"
+          allowfullscreen=""
+          aria-hidden="false"
+          tabindex="0"
+        >
+        </iframe>
+        <div class="bg-white rounded-md flex items-center justify-center w-11/12 max-w-sm absolute left-1/2 transform -translate-x-1/2 mb-4 bottom-0 p-2 shadow-sm ">
+          <img
+            src="./../dist/img/BotellasPKR.png"
+            alt="Imagen del Producto"
+            class="w-5 mr-2"
+          >
+          <p class="text-xs text-gray-700">Estás son las tiendas en las que puedes redimir tu cupón de Poker</p>
+        </div>
+        <!--Carta Tendero-->
+        <div class="bg-white absolute bottom-0 w-full max-w-sm rounded-t-lg shadow-sm p-4 left-1/2 transform -translate-x-1/2 hidden">
+          <p class="text-gray-700 text-xs leading-5"> 
+            Supermercado
+          </p>
+          <p class="text-black font-medium leading-5">
+            Donde el amigo Pedro
+          </p>
+          <div class="flex space-x-2 items-center mt-1">
+            <div class="flex-1 flex items-center flex-wrap">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.975 9.123" class="w-2 fill-current text-gray-700 mr-2">
+                <path id="Icon_awesome-store" data-name="Icon awesome-store" d="M10.73,2.113,9.574.267A.57.57,0,0,0,9.091,0h-7.2a.57.57,0,0,0-.483.267L.252,2.113A1.59,1.59,0,0,0,1.3,4.544a1.852,1.852,0,0,0,.244.016,1.76,1.76,0,0,0,1.315-.59,1.761,1.761,0,0,0,2.63,0,1.761,1.761,0,0,0,2.63,0,1.765,1.765,0,0,0,1.315.59,1.832,1.832,0,0,0,.244-.016A1.588,1.588,0,0,0,10.73,2.113ZM9.438,5.132a2.261,2.261,0,0,1-.526-.068V6.842H2.07V5.064a2.361,2.361,0,0,1-.526.068,2.4,2.4,0,0,1-.321-.021,2.241,2.241,0,0,1-.292-.064V8.553a.57.57,0,0,0,.57.57H9.484a.57.57,0,0,0,.57-.57V5.046a1.819,1.819,0,0,1-.292.064A2.478,2.478,0,0,1,9.438,5.132Z" transform="translate(-0.004)"/>
+              </svg>
+              <p class="text-gray-700 text-xs leading-5">Cra 3ra #56 - 08</p>
+            </div>
+            <div class="flex-1 flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-2 mr-2" viewBox="0 0 9.123 9.123">
+                <g id="Grupo_9466" data-name="Grupo 9466" transform="translate(-136.634 -462.127)">
+                  <path id="Trazado_22307" data-name="Trazado 22307" d="M7.932,3.375A4.562,4.562,0,1,0,12.5,7.937,4.56,4.56,0,0,0,7.932,3.375Zm0,8.211a3.649,3.649,0,1,1,3.649-3.649A3.649,3.649,0,0,1,7.937,11.586Z" transform="translate(133.259 458.752)"/>
+                  <path id="Trazado_22308" data-name="Trazado 22308" d="M17.222,10.688h-.684v2.737l2.395,1.436.342-.561-2.053-1.217Z" transform="translate(124.202 453.72)"/>
+                </g>
+              </svg>
+              <p class="text-gray-700 text-xs leading-5">8 am - 9 pm</p>
+            </div>
+          </div>
+          <a href="/"
+            class="btn btn-black mx-auto w-full mt-2 flex items-center justify-center"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.261 19.022" class="w-3 mr-2 fill-current text-white">
+              <path id="Trazado_22338" data-name="Trazado 22338" d="M568.221,1212.333h0a6.576,6.576,0,0,0-3.874-3.263l-.019.009.009-.012a6.8,6.8,0,0,0-2.018-.3,6.581,6.581,0,0,0-5.064,2.371l0,.02a6.6,6.6,0,0,0-1.55,4.269,7.59,7.59,0,0,0,.647,3.133v0a23.619,23.619,0,0,0,3.007,4.3h0a18.369,18.369,0,0,1,1.5,2.214,11.513,11.513,0,0,1,.823,2.086c.167.48.323.627.656.627.362,0,.529-.245.656-.627a11.884,11.884,0,0,1,.794-2.047,22.944,22.944,0,0,1,2.224-3.144,19.42,19.42,0,0,0,2.2-3.174,7.722,7.722,0,0,0,.754-3.36A6.669,6.669,0,0,0,568.221,1212.333Zm-3.359,3.066a2.719,2.719,0,0,1-.519,1.546l-.065.08-.023.028a2.583,2.583,0,0,1-1.919.883,2.522,2.522,0,0,1-2.537-2.509v-.018a2.685,2.685,0,0,1,.51-1.534l.078-.093-.016-.014h.005v0a2.653,2.653,0,0,1,1.959-.9A2.552,2.552,0,0,1,564.862,1215.4Z" transform="translate(-555.704 -1208.768)"/>
+            </svg>
+            BUSCAR EN EL MAPA
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!--Formulario inscripción-->
+
+    <section class="hidden">
+      <header class="bg-gray-700 text-center py-3 relative z-10">
+        <p class="d-table border-white border rounded-sm mx-auto p-1 text-xs text-white font-black uppercase">
+          Marca
+        </p>
+      </header>
+      <div class="container text-center h-screen-85">
+        <h1 class="font-bold text-lg leading-5 mt-3">Poker</h1>
+        <p class="leading-5 my-2">4 x 5 para parchar</p>
+        <p class="font-light text-sm max-w-xs w-10/12 mx-auto leading-4">
+          Por la compra de <strong class="font-bold">4 Poker</strong> podrás reclamar una totalmente gratis para disfrutar con el parche
+        </p>
+
+        <form action="">
+          <fieldset>
+            <label for="">Documento de identidad</label>
+            <select name="" id="" class="form-select">
+              <option value="">CC</option>
+            </select>
+            <input type="text" class="form-input">
+            <input type="checkbox" name="" id="" class="form-checkbox">
+          </fieldset>
+        </form>
+      </div>
+    </section>
+
+    <!--Validacion-->
+    <section class="hidden">
+      <header class="bg-gray-700 text-center py-3 relative z-10">
+        <p class="d-table border-white border rounded-sm mx-auto p-1 text-xs text-white font-black uppercase">
+          Marca
+        </p>
+      </header>
+      <div class="container text-center h-screen-85">
+        <h2 class="font-bold text-lg leading-5 mt-4">Valida tu número de Celular</h2>
+        <p class="font-light text-sm max-w-sm w-10/12 mx-auto leading-4 my-4">
+          Ingresa el código que enviamos a tu celular <span>300 3088 09</span> y correo <span>andres01@correo.com</span>
+        </p>
+        <button class="btn btn-border btn-white mx-auto">enviar de nuevo</button>
+      </div>
+    </section>
+
+    <!--Cupón de usario  -->
+
+    <section class="hidden">
+      <header class="bg-gray-700 text-center py-3 relative z-10">
+        <p class="d-table border-white border rounded-sm mx-auto p-1 text-xs text-white font-black uppercase">
+          Marca
+        </p>
+      </header>
+      <div class="container text-center">
+        <h1 class="font-bold text-xl leading-5 mt-3">¡Felicidades Andres!</h1>
+        <p class="font-light text-sm max-w-xs w-10/12 mx-auto leading-4 py-3">
+          Lleva 4 Poker y recibe una adicional
+        </p>
+        <img
+          src="./../dist/img/qr.jpg"
+          alt="qr"
+          class="block mx-auto my-4"
+        >
+        <p class="font-bold text-gray-500">Código de cupón</p>
+        <p class="font-bold text-black">XQLRE42N</p>
+        <p class="font-bold text-gray-600">Redención</p>
+        <p class="font-bold text-gray-600 text-sm">De 15/07/2020 al 30/09/2020</p>
+        <a href="/"
+          class="btn btn-black mx-auto w-full my-2 block"
+        >
+          continuar
+        </a>
+        <p class="font-bold text-gray-600 text-sm leading-5">*Este cupón podrá ser redimido únicamente en las tiendas autorizadas.</p>
+        <p class="font-bold text-black text-sm mt-2">*El código del cupón llegará a tu email.</p>
+      </div>
+    </section>
+
+    <!--Consumidor ya registrado -->
+
+    <section class="hidden">
+      <div class="h-screen w-full bg-black">
+        <div class="flex flex-col items-center justify-between text-white h-full font-bold text-center py-6">
+          <p>Consumidor ya registrado</p>
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="135.52" height="135.52" viewBox="0 0 135.52 135.52" class="mx-auto w-20 mb-3">
+              <path id="Icon_ionic-md-close-circle" data-name="Icon ionic-md-close-circle" d="M71.135,3.375a67.76,67.76,0,1,0,67.76,67.76A67.525,67.525,0,0,0,71.135,3.375Zm33.881,92.154-9.486,9.485L71.135,80.62,46.741,105.014l-9.487-9.485L61.649,71.135,37.254,46.741l9.487-9.485L71.135,61.649,95.529,37.256l9.486,9.485L80.621,71.135Z" transform="translate(-3.375 -3.375)" fill="#fff"/>
+            </svg>
+            <p>Código de cupón</p>
+            <p>XQLRE42N</p>
+            <p>Redención*</p>
+            <p class="font-light text-sm">De 15/07/2020 al 30/09/2020</p>
+          </div>
+          <button class="btn btn-white mx-auto">Terminar</button>
+        </div>
+      </div>
+    </section>
+    
+    <!--Cupón ya solicitado -->
+
+    <section class="hidden">
+      <div class="h-screen w-full bg-gray-600">
+        <div class="flex flex-col items-center justify-between text-white h-full font-bold text-center py-6">
+          <p class="leading-5">Este cupón ya ha sido redimido</p>
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="135.52" height="135.52" viewBox="0 0 135.52 135.52" class="mx-auto w-20 mb-3">
+              <path id="Icon_ionic-md-close-circle" data-name="Icon ionic-md-close-circle" d="M71.135,3.375a67.76,67.76,0,1,0,67.76,67.76A67.525,67.525,0,0,0,71.135,3.375Zm33.881,92.154-9.486,9.485L71.135,80.62,46.741,105.014l-9.487-9.485L61.649,71.135,37.254,46.741l9.487-9.485L71.135,61.649,95.529,37.256l9.486,9.485L80.621,71.135Z" transform="translate(-3.375 -3.375)" fill="#fff"/>
+            </svg>
+            <p>Fecha de solicitud</p>
+            <p class="font-light text-sm">19/05/2020</p>
+            <p>Tienda de redención</p>
+            <p>Donde Juan*</p>
+          </div>
+          <button class="btn btn-white mx-auto">Terminar</button>
+        </div>
+      </div>
+    </section>
+
+    <!--Validacion cupones-->
+
+    <section class="hidden">
+      <header class="bg-black p-4">
+        <a
+          href="/"
+          class="flex uppercase text-white underline font-bold text-xs items-center"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="7.4" height="12" viewBox="0 0 7.4 12" class="w-3 mr-1">
+            <path id="Icon" d="M15.4,7.4,14,6,8,12l6,6,1.4-1.4L10.8,12Z" transform="translate(-8 -6)" fill="#fff"/>
+          </svg>
+          volver
+        </a>
+      </header>
+      <div class="container">
+        <div class="max-w-xs text-sm mx-auto leading-4">
+          <h1 class="font-bold text-center mt-6 mb-3">Validación de cupones</h1>
+          <p>1. Escribe o escanea el código QR.</p>
+          <p>2. Valida el cupón.</p>
+          <input type="text" class="form-input w-full">
+          <a href="/" class="flex items-center justify-center btn btn-white btn-border btn-coupon w-full my-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="23.273" height="16" viewBox="0 0 23.273 16" class="mr-1">
+              <path id="Trazado_22339" data-name="Trazado 22339" d="M567.515,1208.278H553.7a.731.731,0,0,0-.515.212l-.94.941-.94-.941a.73.73,0,0,0-.514-.212h-3.636a1.457,1.457,0,0,0-1.455,1.455v13.09a1.456,1.456,0,0,0,1.455,1.455h3.636a.735.735,0,0,0,.515-.212l.94-.941.94.94a.727.727,0,0,0,.514.213h13.818a1.456,1.456,0,0,0,1.455-1.455v-13.09A1.456,1.456,0,0,0,567.515,1208.278Zm-14.926,13.091h-.753v-1.455h.754Zm0-2.909h-.753v-1.455h.754Zm0-2.909h-.753V1214.1h.754Zm0-2.909h-.753v-1.455h.754Zm5.471-1.455a2.182,2.182,0,1,1-2.182,2.182A2.182,2.182,0,0,1,558.06,1211.187Zm-1.454,10.182a.727.727,0,0,1-.559-1.193l7.273-8.727a.727.727,0,1,1,1.12.927l0,.005-7.273,8.727A.73.73,0,0,1,556.606,1221.369Zm5.818,0a2.182,2.182,0,1,1,2.182-2.182A2.182,2.182,0,0,1,562.424,1221.369Z" transform="translate(-545.697 -1208.278)"/>
+            </svg>
+            Escanear código QR
+          </a>
+          <button class="flex items-center justify-center btn btn-secondary btn-coupon w-full">
+            Validar cupón
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!--validar cupon -->
+
+    <section class="hidden">
+      <div class="h-screen w-full bg-black">
+        <div class="flex flex-col items-center justify-end text-white h-full font-bold text-center py-6">
+          <div class="my-32 md:my-48">
+            <svg xmlns="http://www.w3.org/2000/svg" width="135.52" height="135.52" viewBox="0 0 135.52 135.52" class="mx-auto w-20 mb-3">
+              <path id="Trazado_22341" data-name="Trazado 22341" d="M279.068,195.542H278.6a67.525,67.525,0,1,0,.471,0ZM284.3,300.8H269.942V288.6H284.3Zm13.843-40.039a32.5,32.5,0,0,1-9.107,8.837,11.637,11.637,0,0,0-3.906,4.615,17.651,17.651,0,0,0-.928,6.372H269.99q.05-6.836,2.027-10.01t7.886-7.715a25.78,25.78,0,0,0,5.542-6.1,13.391,13.391,0,0,0,2.075-7.325,9.914,9.914,0,0,0-2.368-7.031,8.8,8.8,0,0,0-6.763-2.539,9.113,9.113,0,0,0-6.128,2.149,7.957,7.957,0,0,0-2.564,6.3H255.83l-.1-.293q-.147-9.375,6.176-14.355t16.48-4.981q10.936,0,17.163,5.542t6.226,15.064A19.8,19.8,0,0,1,298.14,260.764Z" transform="translate(-210.837 -195.542)" fill="#fff"/>
+            </svg>
+            <p>¿Deseas validar este cupón?</p>
+          </div>
+          <button class="btn btn-secondary btn-round-sm mx-auto">Validar cupón</button>
+          <button class="btn btn-white btn-round-sm mx-auto mt-3">Volver</button>
+        </div>
+      </div>
+    </section>
+
+    <!--Validacion exitosa -->
+
+    <section class="hidden">
+      <div class="h-screen w-full bg-success-500 bg-s">
+        <div class="flex flex-col items-center justify-center text-white h-full font-bold text-center py-6">
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="135.52" height="135.52" viewBox="0 0 135.52 135.52" class="mx-auto w-20 mb-3">
+              <path id="Trazado_22342" data-name="Trazado 22342" d="M562.739,1150.518h-.471a67.525,67.525,0,1,0,.471,0ZM553.458,1251.8l-29.526-28.09,10.339-10.868,18.475,17.577,40.836-44.388,11.039,10.156Z" transform="translate(-494.508 -1150.518)" fill="#fff"/>
+            </svg>
+            <p>Validación de cupón exitosa</p>
+            <p class="font-light text-sm">19/05/2020</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--cupon redimido con exito -->
+
+    <section class="hidden">
+      <header class="bg-black h-8">
+      </header>
+      <div class="container text-center">
+        <h1 class="font-bold text-lg leading-5 mt-3">Poker</h1>
+        <p class="leading-5 my-2">4 x 5 para parchar</p>
+        <p class="font-light text-sm max-w-xs w-10/12 mx-auto leading-4">
+          Por la compra de <strong class="font-bold">4 Poker</strong> entrega una adicional al parche
+        </p>
+        <img
+          src="./../dist/img/botellapkr.png"
+          alt="qr"
+          class="block mx-auto my-4"
+        >
+        <p class="font-medium text-gray-600 text-xs leading-5">*Redimiste un cupón de esta prom equivalente a 200 puntos Bee.</p>
+        <p class="font-medium text-gray-600 text-xs my-3">*Los puntos Bees se verán reflejados en 24 horas.</p>
+        <button class="btn btn-secondary btn-round-sm mx-auto">Validar otro Cupón</button>
+        <button class="btn btn-white btn-round-sm btn-border mx-auto my-3">Ver historial de redenciones</button>
+      </div>
+    </section>
+
+    <!--cupón tendero redimido previamente-->
+
+    <section class="hidden">
+      <div class="h-screen w-full bg-gray-600">
+        <div class="flex flex-col items-center justify-between text-white h-full font-bold text-center py-6 max-w-sm mx-auto">
+          <div>
+            <p class="leading-5">Este cupón ya ha sido redimido anteriormente</p>
+            <p class="font-normal text-sm leading-5 mt-3">Comunícale al cliente que el beneficio no podrá ser entregado.</p>
+          </div>
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="135.52" height="135.52" viewBox="0 0 135.52 135.52" class="mx-auto w-20 mb-3">
+              <path id="Icon_ionic-md-close-circle" data-name="Icon ionic-md-close-circle" d="M71.135,3.375a67.76,67.76,0,1,0,67.76,67.76A67.525,67.525,0,0,0,71.135,3.375Zm33.881,92.154-9.486,9.485L71.135,80.62,46.741,105.014l-9.487-9.485L61.649,71.135,37.254,46.741l9.487-9.485L71.135,61.649,95.529,37.256l9.486,9.485L80.621,71.135Z" transform="translate(-3.375 -3.375)" fill="#fff"/>
+            </svg>
+            <p>Fecha de redención</p>
+            <p class="font-light text-sm">19/05/2020</p>
+            <p class="mt-4">Tienda de redención</p>
+            <p>Donde Juan</p>
+          </div>
+          <button class="btn btn-white mx-auto">Validar otro Cupón</button>
+        </div>
+      </div>
+    </section>
+
+    <!--cupon tendero caducado-->
+
+    <section class="hidden">
+      <div class="h-screen w-full bg-black">
+        <div class="flex flex-col items-center justify-between text-white h-full font-bold text-center py-6">
+          <div>
+            <p class="leading-5">Este cupón ha caducado</p>
+            <p class="font-normal text-sm leading-5 mt-3">Comunícale al cliente que el beneficio no podrá ser entregado.</p>
+          </div>
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="135.52" height="135.52" viewBox="0 0 135.52 135.52" class="mx-auto w-20 mb-3">
+              <path id="Icon_ionic-md-close-circle" data-name="Icon ionic-md-close-circle" d="M71.135,3.375a67.76,67.76,0,1,0,67.76,67.76A67.525,67.525,0,0,0,71.135,3.375Zm33.881,92.154-9.486,9.485L71.135,80.62,46.741,105.014l-9.487-9.485L61.649,71.135,37.254,46.741l9.487-9.485L71.135,61.649,95.529,37.256l9.486,9.485L80.621,71.135Z" transform="translate(-3.375 -3.375)" fill="#fff"/>
+            </svg>
+            <p>Fecha de redención</p>
+            <p class="font-light text-sm">19/05/2020</p>
+          </div>
+          <button class="btn btn-white mx-auto">Validar otro Cupón</button>
+        </div>
+      </div>
+    </section>
+
+    <!--cupon tendero no existe-->
+
+    <section class="hidden">
+      <div class="h-screen w-full bg-black">
+        <div class="flex flex-col items-center justify-end text-white h-full font-bold text-center py-6">
+          <div class="my-32 sm:my-56">
+            <p class="leading-5 mb-4">Este código no existe, intentalo de nuevo</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="135.52" height="135.52" viewBox="0 0 135.52 135.52" class="mx-auto w-20 mb-3">
+              <path id="Icon_ionic-md-close-circle" data-name="Icon ionic-md-close-circle" d="M71.135,3.375a67.76,67.76,0,1,0,67.76,67.76A67.525,67.525,0,0,0,71.135,3.375Zm33.881,92.154-9.486,9.485L71.135,80.62,46.741,105.014l-9.487-9.485L61.649,71.135,37.254,46.741l9.487-9.485L71.135,61.649,95.529,37.256l9.486,9.485L80.621,71.135Z" transform="translate(-3.375 -3.375)" fill="#fff"/>
+            </svg>
+            <p>Fecha de redención</p>
+            <p class="font-light text-sm">19/05/2020</p>
+          </div>
+          <button class="btn btn-white mx-auto">Validar otro Cupón</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- balance de cupones -->
+
+    <section class="hidden">
+      <header class="bg-black p-4">
+        <a
+          href="/"
+          class="flex uppercase text-white underline font-bold text-xs items-center"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="7.4" height="12" viewBox="0 0 7.4 12" class="w-3 mr-1">
+            <path id="Icon" d="M15.4,7.4,14,6,8,12l6,6,1.4-1.4L10.8,12Z" transform="translate(-8 -6)" fill="#fff"/>
+          </svg>
+          volver
+        </a>
+      </header>
+      <div class="bg-secondary-500">
+        <div class="container p-3">
+          <div class="flex py">
+            <div class="flex-1 font-bold text-sm border-r-2 border-white pr-3">
+              <p>Balance de crédito</p>
+              <p class="font-light text-md">Crédito acumulable</p>
+              <p class="text-base">$56.000</p>
+            </div>
+            <div class="flex-1 font-bold text-sm pl-3">
+              <p>Balance de puntos</p>
+              <p class="font-light text-md leading-4">Puntos acumulados Bees</p>
+              <p class="text-base">200</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <p class="text-sm font-light text-gray-700 my-4">*Tus puntos de verán reflejados en 24 horas</p>
+        <div class="h-screen-55 overflow-y-scroll sm:p-4">
+          <table class="c-table table table-striped table-sm table-borderless text-xs leading-tight">
+            <thead>
+              <tr>
+                <td scope="col">Cupones</td>
+                <td scope="col">Valor</td>
+                <td scope="col">Fecha de redención</td>
+                <td scope="col">Puntos</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>zrKSup6sVA9N</td>
+                <th>$200</th>
+                <td>19/05/2020</td>
+                <th>20</th>
+              </tr>
+              <tr>
+                <td>zrKSup6sVA9N</td>
+                <th>$200</th>
+                <td>19/05/2020</td>
+                <th>20</th>
+              </tr>
+              <tr>
+                <td>zrKSup6sVA9N</td>
+                <th>$200</th>
+                <td>19/05/2020</td>
+                <th>20</th>
+              </tr>
+              <tr>
+                <td>zrKSup6sVA9N</td>
+                <th>$200</th>
+                <td>19/05/2020</td>
+                <th>20</th>
+              </tr>
+              <tr>
+                <td>zrKSup6sVA9N</td>
+                <th>$200</th>
+                <td>19/05/2020</td>
+                <th>20</th>
+              </tr>
+              <tr>
+                <td>zrKSup6sVA9N</td>
+                <th>$200</th>
+                <td>19/05/2020</td>
+                <th>20</th>
+              </tr>
+              <tr>
+                <td>zrKSup6sVA9N</td>
+                <th>$200</th>
+                <td>19/05/2020</td>
+                <th>20</th>
+              </tr>
+              <tr>
+                <td>zrKSup6sVA9N</td>
+                <th>$200</th>
+                <td>19/05/2020</td>
+                <th>20</th>
+              </tr>
+              <tr>
+                <td>zrKSup6sVA9N</td>
+                <th>$200</th>
+                <td>19/05/2020</td>
+                <th>20</th>
+              </tr>
+              <tr>
+                <td>zrKSup6sVA9N</td>
+                <th>$200</th>
+                <td>19/05/2020</td>
+                <th>20</th>
+              </tr>
+              <tr>
+                <td>zrKSup6sVA9N</td>
+                <th>$200</th>
+                <td>19/05/2020</td>
+                <th>20</th>
+              </tr>
+              <tr>
+                <td>zrKSup6sVA9N</td>
+                <th>$200</th>
+                <td>19/05/2020</td>
+                <th>20</th>
+              </tr>
+              <tr>
+                <td>zrKSup6sVA9N</td>
+                <th>$200</th>
+                <td>19/05/2020</td>
+                <th>20</th>
+              </tr>
+              <tr>
+                <td>zrKSup6sVA9N</td>
+                <th>$200</th>
+                <td>19/05/2020</td>
+                <th>20</th>
+              </tr>
+              <tr>
+                <td>zrKSup6sVA9N</td>
+                <th>$200</th>
+                <td>19/05/2020</td>
+                <th>20</th>
+              </tr>
+              <tr>
+                <td>zrKSup6sVA9N</td>
+                <th>$200</th>
+                <td>19/05/2020</td>
+                <th>20</th>
+              </tr>
+              <tr>
+                <td>zrKSup6sVA9N</td>
+                <th>$200</th>
+                <td>19/05/2020</td>
+                <th>20</th>
+              </tr>
+              <tr>
+                <td>zrKSup6sVA9N</td>
+                <th>$200</th>
+                <td>19/05/2020</td>
+                <th>20</th>
+              </tr>
+              <tr>
+                <td>zrKSup6sVA9N</td>
+                <th>$200</th>
+                <td>19/05/2020</td>
+                <th>20</th>
+              </tr>
+              <tr>
+                <td>zrKSup6sVA9N</td>
+                <th>$200</th>
+                <td>19/05/2020</td>
+                <th>20</th>
+              </tr>
+              <tr>
+                <td>zrKSup6sVA9N</td>
+                <th>$200</th>
+                <td>19/05/2020</td>
+                <th>20</th>
+              </tr>
+              <tr>
+                <td>zrKSup6sVA9N</td>
+                <th>$200</th>
+                <td>19/05/2020</td>
+                <th>20</th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <a href="/" class="btn btn-secondary btn-round-sm mx-auto block text-center my-4">Validar otro Cupón</a>
+    </section>
+
+    <!--Landing entrenamiento -->
+
+    <section>
+      <header class="bg-gray-700 text-center py-3 relative z-10">
+        <p class="d-table border-white border rounded-sm mx-auto p-1 text-xs text-white font-black uppercase">
+          Marca
+        </p>
+      </header>
+      <div class="container">
+        <h1 class="font-bold my-6">Descubre la mecánica de la promo</h1>
+
+        <div class="embed-responsive embed-responsive-4by3 my-6">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/K8MRCKxP-ak"></iframe>
+        </div>
+
+        <a
+          href=""
+          class="btn btn-white btn-border block text-center mx-auto mb-6"
+        >
+          Entendido
+        </a>
+      </div>
+    </section>
+
+    <!--Footer-->
+    <footer class="bg-gray-100 py-3">
+      <div class="container text-center font-light color-gray700 text-sm">
+        <ul class="px-4">
+          <li>
+            <a href="" target="_blank">Términos y condiciones</a>
+          </li>
+          <li>
+            <a href="" target="_blank">Políticas de Privacidad</a>
+          </li>
+          <li>
+            <a href="" target="_blank">Políticas de protección de datos personales</a>
+          </li>
+          <li>
+            <a href="" target="_blank">Contáctanos</a>
+          </li>
+        </ul>
+        <hr class="border-gray-600 max-w-xs mx-auto my-5 w-9/12">
+        <p>Síguenos en</p>
+        <ul class="flex justify-center space-x-4 items-center my-6">
+          <li>
+            <a href="">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 19.88" class="w-5">
+                <path id="Trazado_22323" data-name="Trazado 22323" d="M126,1035a10,10,0,1,0-11.562,9.88v-6.99H111.9V1035h2.54v-2.2a3.526,3.526,0,0,1,3.777-3.89,15.809,15.809,0,0,1,2.238.19v2.46h-1.261a1.445,1.445,0,0,0-1.63,1.56V1035h2.774l-.443,2.89h-2.331v6.99A10,10,0,0,0,126,1035Z" transform="translate(-106 -1025)" fill="#616161"/>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 14.07" class="w-6">
+                <path id="Trazado_22324" data-name="Trazado 22324" d="M169.8,1031a4.283,4.283,0,0,0-.8-1.98,2.823,2.823,0,0,0-2-.85c-2.8-.21-7-.21-7-.21H160s-4.2,0-7,.21a2.823,2.823,0,0,0-2,.85,4.26,4.26,0,0,0-.793,1.98,29.864,29.864,0,0,0-.2,3.24v1.51a30.455,30.455,0,0,0,.2,3.24,4.37,4.37,0,0,0,.793,1.99,3.4,3.4,0,0,0,2.207.85c1.6.15,6.8.2,6.8.2s4.2-.01,7-.21a2.846,2.846,0,0,0,2-.84,4.345,4.345,0,0,0,.8-1.99,30.207,30.207,0,0,0,.2-3.24v-1.51A30.455,30.455,0,0,0,169.8,1031Zm-11.867,6.59v-5.62l5.4,2.82Z" transform="translate(-150 -1027.96)" fill="#616161"/>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.988 20" class="w-5">
+                <g id="Grupo_9434" data-name="Grupo 9434" transform="translate(-196 -733)">
+                  <path id="Trazado_22325" data-name="Trazado 22325" d="M204,1026.8c2.672,0,2.988.01,4.039.06a5.61,5.61,0,0,1,1.856.34,3.086,3.086,0,0,1,1.148.75,3.029,3.029,0,0,1,.746,1.15,5.46,5.46,0,0,1,.344,1.85c.047,1.06.058,1.37.058,4.04s-.011,2.99-.058,4.04a5.476,5.476,0,0,1-.344,1.86,3.158,3.158,0,0,1-.746,1.15,3.094,3.094,0,0,1-1.148.74,5.376,5.376,0,0,1-1.856.34c-1.055.05-1.371.06-4.039.06s-2.988-.01-4.039-.06a5.354,5.354,0,0,1-1.856-.34,3.261,3.261,0,0,1-1.894-1.89,5.535,5.535,0,0,1-.344-1.86c-.047-1.05-.058-1.37-.058-4.04s.011-2.99.058-4.04a5.46,5.46,0,0,1,.344-1.85,3.077,3.077,0,0,1,.746-1.15,3.118,3.118,0,0,1,1.148-.75,5.634,5.634,0,0,1,1.856-.34C201.012,1026.81,201.328,1026.8,204,1026.8Zm0-1.8c-2.715,0-3.055.01-4.121.06a7.563,7.563,0,0,0-2.426.46,4.9,4.9,0,0,0-1.773,1.16,4.831,4.831,0,0,0-1.157,1.77,7.316,7.316,0,0,0-.464,2.43c-.047,1.07-.059,1.41-.059,4.12s.012,3.05.059,4.12a7.369,7.369,0,0,0,.464,2.43,4.831,4.831,0,0,0,1.157,1.77,4.758,4.758,0,0,0,1.769,1.15,7.3,7.3,0,0,0,2.426.47c1.066.04,1.406.06,4.121.06s3.055-.02,4.121-.06a7.271,7.271,0,0,0,2.426-.47,4.769,4.769,0,0,0,1.77-1.15,4.829,4.829,0,0,0,1.152-1.77,7.327,7.327,0,0,0,.465-2.42c.047-1.07.058-1.41.058-4.13s-.011-3.05-.058-4.12a7.272,7.272,0,0,0-.465-2.42,4.609,4.609,0,0,0-1.145-1.78,4.885,4.885,0,0,0-1.769-1.15,7.292,7.292,0,0,0-2.426-.47C207.055,1025.01,206.715,1025,204,1025Z" transform="translate(2 -292)" fill="#616161"/>
+                  <path id="Trazado_22326" data-name="Trazado 22326" d="M204,1029.86a5.14,5.14,0,1,0,5.137,5.14A5.138,5.138,0,0,0,204,1029.86Zm0,8.47a3.33,3.33,0,1,1,3.332-3.33A3.331,3.331,0,0,1,204,1038.33Z" transform="translate(2 -292)" fill="#616161"/>
+                  <path id="Trazado_22327" data-name="Trazado 22327" d="M210.539,1029.66a1.2,1.2,0,1,1-1.2-1.2A1.2,1.2,0,0,1,210.539,1029.66Z" transform="translate(2 -292)" fill="#616161"/>
+                </g>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <p>No compartas contenido<br>con menores de edad</p>
+        <p>Todos los derechos reservados &copy 2020</p>
+        <a
+          href="https://www.ab-inbev.com/"
+          class="uppercase hover:underline"
+        >
+          Anheuser-Busch Inbev
+        </a>
+      </div>
+    </footer>
+
+    <!--jQuery-->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootstrap 4 -->
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Custom script -->
+    <script src="./../dist/js/main.bundle.js"></script>
+  </body>
+</html>

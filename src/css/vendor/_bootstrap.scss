@@ -1,0 +1,49 @@
+//
+// Bootstrap root
+//
+
+//
+// Overwrite variables
+//
+
+// Grid breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1920px,
+);
+
+// Grid containers
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1180px,
+);
+
+// Colors
+$white: #ffffff;
+$black: #000000;
+$gray: #B7B7B7;
+$primary: #B8272C;
+$secondary: #FFEE00;
+$warning: #EA9D00;
+$success: #A5D500;
+
+//
+// Bootstrap root
+//
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+// Include custom components.
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/modal";
+@import "~bootstrap/scss/tables";
+@import "~bootstrap/scss/utilities/embed";
+// @import "~bootstrap/scss/buttons";
